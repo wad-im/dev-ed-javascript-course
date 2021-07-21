@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #e8d8cb;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background-color: #a9691f;
+}
+.snare-pad {
+  background-color: #9fa08e;
+}
+.hihat-pad {
+  background-color: #42414f;
+}
+.kick-pad.active {
+  background-color: #f08c00;
+}
+.snare-pad.active {
+  background-color: #cfd1b2;
+}
+.hihat-pad.active {
+  background-color: #76758a;
+}
+
+.hihat,
+.snare,
+.kick {
+  display: flex;
+}
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+.controls button {
+  padding: 1rem;
+  border: none;
+  background-color: #d3b59c;
+  color: #42414f;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  display: inline-block;
+  width: auto;
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  margin: 5rem auto 0 auto;
+  background-color: #d3b59c;
+  color: #42414f;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #e8d8cb;
+  color: #42414f;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.mute.active {
+  background-color: #8d7867;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    tranform: scale(1);
+  }
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  position: relative;
+  width: 100%;
+  background-color: #d3b59c;
+  cursor: pointer;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}

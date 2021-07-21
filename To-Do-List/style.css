@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #9eafc1;
+  color: #fff;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+header {
+  color: #1d4970;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+form input,
+form button {
+  background-color: #f5d0b3;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+form input {
+  width: 21%;
+}
+
+form button {
+  cursor: pointer;
+  color: #1d4970;
+  background-color: #f5d0b3;
+  transition: all 0.5s ease;
+}
+
+form button:hover {
+  color: #f5d0b3;
+  background-color: #1d4970;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background-color: #f5d0b3;
+  color: #1d4970;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  cursor: pointer;
+  color: #1d4970;
+  background-color: #f5d0b3;
+  border: none;
+  padding: 1rem;
+}
+
+.trash-btn {
+  color: #937e47;
+}
+
+.todo-item {
+  padding: 1rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  opacity: 0;
+  transform: translateY(8rem) rotateZ(20deg);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #1d4970;
+  background-color: #f5d0b3;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  background-color: #1d4970;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+}
